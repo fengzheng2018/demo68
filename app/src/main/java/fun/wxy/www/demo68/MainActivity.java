@@ -14,27 +14,34 @@ import android.view.MenuItem;
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
+    private Toolbar mToolbar;
+    private BottomNavigationView mBottomNavigationView;
+    private DrawerLayout mDrawerLayout;
+    private NavigationView mNavigationView;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
-        toolbar.setTitle("");
-        setSupportActionBar(toolbar);
+        //设置顶部标题栏
+        mToolbar = (Toolbar) findViewById(R.id.toolbar_top_container1);
+        mToolbar.setTitle("");
+        setSupportActionBar(mToolbar);
 
-        BottomNavigationView bottomNavigationView =
-                findViewById(R.id.bottom_navigation_view_item);
-        BottomNavigationViewHelper.disableShiftModle(bottomNavigationView);
+        //底部导航栏
+        mBottomNavigationView = findViewById(R.id.bottom_navigation_view_item);
+        BottomNavigationViewHelper.disableShiftModle(mBottomNavigationView);
 
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        //侧边滑动栏
+        mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         ActionBarDrawerToggle toggle = new ActionBarDrawerToggle(
-                this, drawer, toolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
-        drawer.addDrawerListener(toggle);
+                this, mDrawerLayout, mToolbar, R.string.navigation_drawer_open, R.string.navigation_drawer_close);
+        mDrawerLayout.addDrawerListener(toggle);
         toggle.syncState();
 
-        NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
-        navigationView.setNavigationItemSelectedListener(this);
+        mNavigationView = (NavigationView) findViewById(R.id.navigation_left_container2);
+        mNavigationView.setNavigationItemSelectedListener(this);
     }
 
     @Override

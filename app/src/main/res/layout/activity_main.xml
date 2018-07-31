@@ -9,14 +9,15 @@
     android:fitsSystemWindows="true"
     tools:openDrawer="start">
 
+    <!--引入主界面布局-->
     <include
-        layout="@layout/app_bar_main"
+        layout="@layout/activity_main_content"
         android:layout_width="match_parent"
         android:layout_height="match_parent" />
 
     <!--侧滑栏布局-->
     <android.support.design.widget.NavigationView
-        android:id="@+id/nav_view"
+        android:id="@+id/navigation_left_container1"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
         android:layout_gravity="start"
@@ -29,7 +30,7 @@
 
             <!--侧滑栏顶部人员信息和菜单项-->
             <android.support.design.widget.NavigationView
-                android:id="@+id/navigation_left_container"
+                android:id="@+id/navigation_left_container2"
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
                 android:layout_gravity="top"
