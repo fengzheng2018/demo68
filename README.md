@@ -2,8 +2,8 @@
 
 ### 侧滑栏
 <font face="宋体">
-&emsp;&emsp;侧滑栏NavigationView布局的id为navigation_left_container1。  
-&emsp;&emsp;侧滑栏布局里包含一个线性布局，线性布局里包含两个NavigationView，第一个NavigationView内容为侧滑栏顶部人员信息和菜单项，第二个NavigationView内容为底部的登陆和注册按钮。  
+侧滑栏NavigationView布局的id为navigation_left_container1。<br/>
+侧滑栏布局里包含一个线性布局，线性布局里包含两个NavigationView，第一个NavigationView内容为侧滑栏顶部人员信息和菜单项，第二个NavigationView内容为底部的登陆和注册按钮。  
 
 * 第一个NavigationView  
   ID为navigation_left_container2，包含两个布局：顶部人员信息布局navigation_left_head.xml和底部菜单布局navigation_left_item。
@@ -17,7 +17,7 @@
 * 第二个NavigationView  
   引入登陆和注册按钮的布局navigation_left_foot.xml，登陆按钮ID为navigation_left_button1，注册按钮ID为navigation_left_button2。  
 </font>
-***
+
 ### 主界面
 <font face="宋体">
 &emsp;&emsp;主界面布局在activity_main.xml布局文件中引入，主界面布局包括顶部toolbar，中间地图展示区域，底部BootNavigationView。  
@@ -35,7 +35,7 @@ GPS设置：ID为tooBar_top_menu_item2
 搜索按钮：ID为bottom_sousuo
 查看任务：ID为bottom_renwu
 </font>
-***
+
 ### 图标文件
 <font face="宋体">
 图标文件放到drawable文件夹下：<br/>
