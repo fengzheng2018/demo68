@@ -49,11 +49,4 @@
         app:layout_constraintTop_toBottomOf="@id/navigation_left_Guideline2"
         app:layout_constraintLeft_toRightOf="@+id/navigation_left_Guideline1" />
 
-    <!--底部的分隔线-->
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@color/toolbar_menu_textColor"
-        app:layout_constraintTop_toBottomOf="parent"/>
-
 </android.support.constraint.ConstraintLayout>
