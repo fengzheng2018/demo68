@@ -11,6 +11,10 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.esri.arcgisruntime.mapping.ArcGISMap;
+import com.esri.arcgisruntime.mapping.Basemap;
+import com.esri.arcgisruntime.mapping.view.MapView;
+
 public class MainActivity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener {
 
@@ -18,6 +22,7 @@ public class MainActivity extends AppCompatActivity
     private BottomNavigationView mBottomNavigationView;
     private DrawerLayout mDrawerLayout;
     private NavigationView mNavigationView;
+    private MapView mapView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -42,6 +47,13 @@ public class MainActivity extends AppCompatActivity
         //滑动栏菜单项监听
         mNavigationView = (NavigationView) findViewById(R.id.navigation_left_container2);
         mNavigationView.setNavigationItemSelectedListener(this);
+
+        //显示地图
+        mapView = findViewById(R.id.mapView);
+        ArcGISMap map =
+                new ArcGISMap(Basemap.Type.TOPOGRAPHIC,
+                        34.056295, -117.195800, 16);
+        mapView.setMap(map);
     }
 
     //按返回键时隐藏侧边滑动栏
@@ -95,5 +107,23 @@ public class MainActivity extends AppCompatActivity
 
         mDrawerLayout.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    protected void onPause(){
+        mapView.pause();
+        super.onPause();
+    }
+
+    @Override
+    protected void onResume(){
+        super.onResume();
+        mapView.resume();
+    }
+
+    @Override
+    protected void onDestroy(){
+        super.onDestroy();
+        mapView.dispose();
     }
 }

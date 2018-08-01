@@ -20,6 +20,18 @@
         app:layout_constraintLeft_toLeftOf="parent"/>
 
     <!--中间内容显示区域-->
+    <android.support.constraint.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/toolbar_top_container1"
+        app:layout_constraintBottom_toTopOf="@id/bottom_navigation_view_item"
+        app:layout_constraintLeft_toLeftOf="parent">
+        <com.esri.arcgisruntime.mapping.view.MapView
+            android:id="@+id/mapView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+        </com.esri.arcgisruntime.mapping.view.MapView>
+    </android.support.constraint.ConstraintLayout>
 
     <!--底部导航栏布局-->
     <android.support.design.widget.BottomNavigationView

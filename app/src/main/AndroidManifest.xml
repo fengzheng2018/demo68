@@ -21,4 +21,10 @@
         </activity>
     </application>
 
+    <!--运行权限-->
+    <!--访问网络-->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <!--openGL权限-->
+    <uses-feature android:glEsVersion="0x00020000" android:required="true" />
+
 </manifest>

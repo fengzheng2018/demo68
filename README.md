@@ -28,6 +28,8 @@ toolbar菜单项：
 切换地图：ID为tooBar_top_menu_item1  
 GPS设置：ID为tooBar_top_menu_item2  
 校准：ID为tooBar_top_menu_item3<br/><br/>
+* 中间地图显示区域  
+ID 为mapView<br/><br/>
 * 底部导航栏BottomNavigationView  
 引入菜单文件navigation_bottom_item1.xml  
 定位按钮：ID为bottom_dingwei  
